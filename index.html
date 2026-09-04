@@ -3,33 +3,900 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Batwana — Kenya's family fun, booked in a minute.</title>
-<meta name="description" content="Batwana brings supervised family fun to birthdays, schools, corporate family days, estates and community events across Nairobi.">
+
+<title>Batwana — children's funparks, brought to you. Nairobi.</title>
+<meta name="description" content="Batwana brings the funpark to you across Nairobi — inflatables, rides, water play, games and trained crew. Published supervision ratios, space and power for every unit, and prices from KES 35,000.">
+
+<link rel="canonical" href="https://dansamuka.github.io/batwana-web/">
 <meta name="theme-color" content="#2A2266">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Batwana Kenya Limited">
+<meta property="og:title" content="Batwana — children's funparks, brought to you.">
+<meta property="og:description" content="Inflatables, rides, water play, games and trained crew, delivered and run at your venue across Nairobi.">
+<meta property="og:url" content="https://dansamuka.github.io/batwana-web/">
+<meta property="og:image" content="https://dansamuka.github.io/batwana-web/assets/logo/batwana-logo-reversed.png">
+<meta property="og:locale" content="en_KE">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+<link rel="manifest" href="site.webmanifest">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Figtree:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Figtree:wght@400;600&display=swap">
+
 <style>
-:root{--indigo:#2A2266;--indigo2:#382F87;--violet:#4A3AAE;--yellow:#F8C800;--pink:#F85088;--green:#9DCD59;--red:#EE432E;--amber:#FEB91B;--ink:#241F3D;--cream:#FFF7E6;--mist:#EFEDF7;--paper:#fff;--max:1180px;--shadow:0 18px 60px rgba(42,34,102,.16)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:#fff;font-family:Figtree,system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}.skip{position:fixed;left:14px;top:-70px;z-index:1000;background:var(--yellow);padding:10px 16px;border-radius:999px;font-weight:700}.skip:focus{top:14px}.top{position:fixed;inset:0 0 auto;z-index:50;background:rgba(42,34,102,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.12)}.nav{height:74px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;text-decoration:none;color:#fff;font-family:"Baloo 2",sans-serif;font-size:1.85rem;font-weight:800;letter-spacing:.02em}.brand-mark{width:39px;height:39px;margin-right:10px;border-radius:42% 58% 46% 54%/56% 44% 56% 44%;display:grid;place-items:center;background:var(--yellow);color:var(--indigo);font-size:1.12rem;transform:rotate(-5deg)}.links{margin-left:auto;display:flex;gap:22px;align-items:center}.links a{color:#fff;text-decoration:none;font-weight:600;font-size:.96rem}.links a:hover{text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:6px}.button{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:48px;padding:11px 22px;border-radius:999px;border:0;background:var(--yellow);color:var(--ink);font-family:"Baloo 2";font-size:1.05rem;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s ease}.button:hover{transform:translateY(-1px);background:#e5b900}.button.alt{background:transparent;border:2px solid currentColor}.button.wa{background:#25D366;color:#0b2e17}.menu{display:none;margin-left:auto;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:12px;padding:8px 12px;font-weight:700}.hero{min-height:720px;padding:155px 0 96px;color:#fff;background:radial-gradient(circle at 85% 22%,rgba(248,200,0,.22),transparent 22%),radial-gradient(circle at 72% 75%,rgba(248,80,136,.2),transparent 24%),linear-gradient(135deg,var(--indigo),var(--indigo2));position:relative;overflow:hidden}.hero:before,.hero:after{content:"";position:absolute;border-radius:45% 55% 50% 50%/55% 45% 55% 45%;opacity:.96}.hero:before{width:240px;height:240px;right:-60px;top:120px;background:var(--yellow);transform:rotate(22deg)}.hero:after{width:170px;height:170px;right:110px;bottom:-70px;background:var(--pink);transform:rotate(-19deg)}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:var(--yellow);margin-bottom:18px}.hero h1,.section h2{font-family:"Baloo 2",sans-serif;line-height:1.02;margin:0}.hero h1{font-size:clamp(3rem,6.5vw,5.8rem);max-width:780px}.hero p{font-size:clamp(1.08rem,2vw,1.3rem);max-width:650px;color:rgba(255,255,255,.84);margin:24px 0 30px}.actions{display:flex;flex-wrap:wrap;gap:12px}.hero-card{position:relative;z-index:2;background:#fff;color:var(--ink);border-radius:34px;padding:34px;box-shadow:0 26px 70px rgba(0,0,0,.22);transform:rotate(1.5deg)}.hero-card h3{font-family:"Baloo 2";font-size:2rem;margin:0 0 10px}.ticks{padding:0;margin:22px 0 0;list-style:none}.ticks li{display:flex;gap:10px;margin:11px 0}.ticks li:before{content:"✓";width:24px;height:24px;flex:0 0 24px;border-radius:50%;display:grid;place-items:center;background:var(--green);font-weight:900}.proof{margin-top:-34px;position:relative;z-index:5}.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.proof-item{padding:25px;border-right:1px solid var(--mist)}.proof-item:last-child{border:0}.proof strong{display:block;font-family:"Baloo 2";font-size:1.25rem}.proof span{color:#635d75;font-size:.92rem}.section{padding:105px 0}.section.alt{background:var(--cream)}.section.dark{background:var(--indigo2);color:#fff}.head{max-width:720px;margin-bottom:46px}.head h2{font-size:clamp(2.25rem,4.2vw,4rem)}.head p{font-size:1.1rem;color:#696278}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid #ece9f6;border-radius:26px;padding:28px;box-shadow:0 8px 28px rgba(42,34,102,.06)}.card.accent{border:2px solid var(--yellow);transform:translateY(-8px);box-shadow:var(--shadow)}.card h3{font-family:"Baloo 2";font-size:1.65rem;margin:0 0 8px}.icon{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px;font-size:1.5rem;background:var(--mist)}.card:nth-child(2) .icon{background:#fff0f5}.card:nth-child(3) .icon{background:#eef8e2}.tag{display:inline-block;border-radius:999px;background:var(--yellow);padding:5px 11px;font-size:.78rem;font-weight:800;margin-bottom:12px}.list{padding-left:0;list-style:none}.list li{padding:9px 0;border-bottom:1px solid #eeeaf7}.occasions{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.occasion{min-height:150px;border-radius:24px;padding:24px;color:#fff;background:var(--indigo)}.occasion:nth-child(3n+2){background:#b72b5d}.occasion:nth-child(3n+3){background:#528a25}.occasion h3{font-family:"Baloo 2";font-size:1.45rem;margin:0 0 6px}.occasion p{margin:0;color:rgba(255,255,255,.85)}.safety-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}.shield{min-height:420px;border-radius:42px;background:radial-gradient(circle at 35% 25%,#fff7,transparent 25%),var(--yellow);display:grid;place-items:center}.shield:before{content:"✓";width:180px;height:210px;border-radius:48% 48% 60% 60%/35% 35% 65% 65%;background:var(--indigo);color:#fff;display:grid;place-items:center;font-size:5rem;font-weight:900;box-shadow:0 20px 50px rgba(42,34,102,.25)}.safety-points{display:grid;gap:16px}.safety-point{display:grid;grid-template-columns:44px 1fr;gap:14px}.num{width:44px;height:44px;border-radius:15px;background:var(--mist);display:grid;place-items:center;font-weight:900;color:var(--indigo)}.safety-point h3{font-family:"Baloo 2";font-size:1.35rem;margin:0}.safety-point p{margin:3px 0;color:#6f687a}.partner{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.panel{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:34px;border-radius:28px}.panel h3{font-family:"Baloo 2";font-size:1.7rem;margin-top:0}.faq{max-width:850px}.faq details{border-bottom:1px solid #ded9ed;padding:20px 0}.faq summary{cursor:pointer;font-family:"Baloo 2";font-size:1.25rem;font-weight:700}.faq p{color:#6d6678}.contact-box{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;background:var(--indigo);color:#fff;border-radius:34px;padding:50px}.contact-box h2{font-size:clamp(2.3rem,4vw,3.8rem)}.contact-box p{color:rgba(255,255,255,.78)}.contact-meta{display:grid;gap:12px;align-content:center}.contact-meta a{text-decoration:none;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:15px 18px;border-radius:16px}.footer{background:#201a54;color:#fff;padding:42px 0}.footer-row{display:flex;gap:24px;align-items:center;justify-content:space-between}.footer small{color:rgba(255,255,255,.65)}.note{margin-top:18px;font-size:.83rem;color:#786f82}
-@media(max-width:900px){.links{display:none}.menu{display:block}.links.open{display:flex;position:absolute;top:74px;left:0;right:0;background:var(--indigo);padding:24px;flex-direction:column;align-items:flex-start}.hero-grid,.safety-grid,.partner,.contact-box{grid-template-columns:1fr}.cards,.occasions{grid-template-columns:1fr 1fr}.card.accent{transform:none}.proof-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:620px){.wrap{width:min(100% - 28px,var(--max))}.hero{padding-top:125px;min-height:auto}.hero h1{font-size:3.15rem}.hero-card{padding:25px}.proof{margin-top:-22px}.proof-grid,.cards,.occasions{grid-template-columns:1fr}.proof-item{border-right:0;border-bottom:1px solid var(--mist)}.section{padding:78px 0}.contact-box{padding:30px}.footer-row{align-items:flex-start;flex-direction:column}}
+/* ============================================================================
+   BATWANA — design system
+   Colour sampled from the logo PNG and the Funpark Proposal, not eyeballed.
+   Contrast is measured; pink (3.37:1) and red (3.83:1) never carry small text.
+   ========================================================================= */
+:root{
+  --indigo-900:#2A2266; --indigo-700:#382F87; --indigo-500:#4A3AAE;
+  --yellow:#F8C800;     --yellow-deep:#DDB000; --pink:#F85088;
+  --green:#9DCD59;      --red:#EE432E;         --amber:#FEB91B;
+  --ink:#241F3D;        --paper:#fff;          --cream:#FFF7E6; --mist:#EFEDF7;
+
+  --display:"Baloo 2",ui-rounded,system-ui,sans-serif;
+  --body:Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --fs-hero:clamp(2.6rem,1.3rem + 5.6vw,5rem);
+  --fs-h2:clamp(1.75rem,1.15rem + 2.5vw,2.9rem);
+  --fs-h3:clamp(1.2rem,1.08rem + .55vw,1.5rem);
+  --fs-lead:clamp(1.05rem,1rem + .3vw,1.2rem);
+  --fs-fig:clamp(1.8rem,1.3rem + 2vw,2.6rem);
+
+  --max:1180px;
+  --band:clamp(64px,8vw,120px);
+  --r-card:24px; --r-media:32px; --r-input:12px; --r-pill:999px;
+  --shadow-1:0 2px 10px rgba(36,31,61,.07);
+  --shadow-2:0 18px 50px rgba(36,31,61,.16);
+  --ease:cubic-bezier(.2,0,.2,1);
+  --ease-splat:cubic-bezier(.34,1.4,.64,1);
+  --header-h:74px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 16px)}
+body{
+  margin:0;color:var(--ink);background:var(--paper);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2{font-family:var(--display);font-weight:800;margin:0 0 .5em;letter-spacing:-.02em}
+h3{font-family:var(--display);font-weight:700;font-size:var(--fs-h3);margin:0 0 .4em}
+h4{font-family:var(--body);font-weight:600;font-size:1.05rem;margin:0 0 .3em}
+h2{font-size:var(--fs-h2);line-height:1.08}
+p{margin:0 0 1rem;max-width:66ch}
+ul{margin:0 0 1rem;padding-left:1.15em}
+li{margin-bottom:.4em}
+
+/* Visible, branded focus. Works on light and dark surfaces alike. */
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;border-radius:6px}
+
+.wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+.band{padding-block:var(--band);position:relative}
+.band--dark{background:var(--indigo-700);color:#fff}
+.band--deep{background:var(--indigo-900);color:#fff}
+.band--cream{background:var(--cream)}
+.band__head{max-width:44rem;margin-bottom:clamp(32px,4vw,56px)}
+.eyebrow{
+  font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--indigo-500);margin:0 0 .6em
+}
+.band--dark .eyebrow,.band--deep .eyebrow{color:var(--yellow)}
+.lead{font-size:var(--fs-lead)}
+.muted{color:color-mix(in srgb,var(--ink) 66%,transparent)}
+.band--dark .muted,.band--deep .muted{color:rgba(255,255,255,.78)}
+.grid{display:grid;gap:clamp(16px,2vw,24px)}
+@media(min-width:700px){.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.g4{grid-template-columns:repeat(4,1fr)}.g6{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:700px) and (max-width:999px){.g4,.g6{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- skip link ---------- */
+.skip{
+  position:absolute;left:16px;top:-80px;z-index:300;background:var(--yellow);color:var(--ink);
+  padding:12px 22px;border-radius:var(--r-pill);font-family:var(--display);font-weight:700;
+  text-decoration:none;transition:top .18s var(--ease)
+}
+.skip:focus{top:16px}
+.sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- header ---------- */
+.hdr{
+  position:fixed;inset:0 0 auto;z-index:100;min-height:var(--header-h);
+  display:flex;align-items:center;
+  transition:background .24s var(--ease),box-shadow .24s var(--ease)
+}
+.hdr.stuck{background:var(--indigo-900);box-shadow:var(--shadow-2)}
+.hdr .wrap{display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
+.brand img{width:124px;height:auto}
+.links{display:none;margin-left:auto;gap:26px;align-items:center}
+@media(min-width:1000px){.links{display:flex}}
+.links a{color:#fff;text-decoration:none;font-weight:600;font-size:.98rem;padding:12px 2px;display:inline-flex;align-items:center;min-height:44px}
+.links a:hover{text-decoration:underline;text-decoration-color:var(--yellow);text-decoration-thickness:3px;text-underline-offset:7px}
+.hdr-cta{margin-left:auto;display:flex;align-items:center;gap:10px}
+@media(min-width:1000px){.hdr-cta{margin-left:0}}
+.iconbtn{
+  display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;
+  border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;cursor:pointer
+}
+.iconbtn:hover{background:rgba(255,255,255,.3)}
+.burger{display:inline-flex}
+@media(min-width:1000px){.burger{display:none}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:12px 28px;border:2px solid transparent;border-radius:var(--r-pill);
+  background:var(--yellow);color:var(--ink);            /* 9.9:1 — the only button pairing */
+  font-family:var(--display);font-weight:700;font-size:1.05rem;
+  text-decoration:none;cursor:pointer;position:relative;overflow:hidden;
+  transition:background .18s var(--ease),transform .18s var(--ease)
+}
+.btn:hover{background:var(--yellow-deep)}
+.btn:active{transform:translateY(1px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:currentColor}
+.btn--ghost:hover{background:var(--mist)}
+.band--dark .btn--ghost,.band--deep .btn--ghost,.hero .btn--ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+.band--dark .btn--ghost:hover,.band--deep .btn--ghost:hover,.hero .btn--ghost:hover{background:rgba(255,255,255,.14)}
+.btn--wa{background:#25D366;color:#0B2E17}
+.btn--wa:hover{background:#1FBA59}
+.btn--sm{min-height:44px;padding:9px 20px;font-size:1rem}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px}
+.btn .ink{position:absolute;border-radius:50%;transform:translate(-50%,-50%) scale(0);background:var(--yellow-deep);opacity:.5;pointer-events:none;animation:drop .3s var(--ease-splat) forwards}
+@keyframes drop{to{transform:translate(-50%,-50%) scale(1);opacity:0}}
+
+/* ---------- mobile drawer ---------- */
+.drawer{position:fixed;inset:0;z-index:200;display:none}
+.drawer[data-open]{display:block}
+.drawer__bg{position:absolute;inset:0;background:rgba(36,31,61,.65)}
+.drawer__panel{
+  position:absolute;inset:0 0 0 auto;width:min(86vw,360px);background:var(--indigo-900);color:#fff;
+  padding:18px;display:flex;flex-direction:column;overflow-y:auto;
+  transform:translateX(100%);animation:slide .24s var(--ease) forwards
+}
+@keyframes slide{to{transform:translateX(0)}}
+.drawer__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.drawer nav{flex:1}
+.drawer nav a{display:block;padding:14px 0;color:#fff;text-decoration:none;font-size:1.15rem;font-weight:600;border-bottom:1px solid rgba(255,255,255,.18)}
+.drawer__foot{display:grid;gap:10px;padding-top:20px}
+
+/* ---------- splat system ---------- */
+/* A divider paints the INCOMING section's shape over the OUTGOING section's
+   colour. Set both, or the shape matches the page and vanishes. */
+.divider{display:block;width:100%;height:clamp(48px,6vw,104px);line-height:0}
+.divider svg{width:100%;height:100%;display:block}
+.to-paper{color:var(--paper)} .to-cream{color:var(--cream)}
+.to-dark{color:var(--indigo-700)} .to-deep{color:var(--indigo-900)}
+.from-paper{background:var(--paper)} .from-cream{background:var(--cream)}
+.from-dark{background:var(--indigo-700)} .from-deep{background:var(--indigo-900)}
+.flip{transform:scaleY(-1)}
+.confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;display:block;width:var(--d,10px);height:var(--d,10px);border-radius:50%;background:var(--c);opacity:.9}
+.splat-media{border-radius:var(--r-media);overflow:hidden;background:var(--indigo-500)}
+@supports(clip-path:url("#m1")){
+  .sm1{clip-path:url("#m1");border-radius:0}
+  .sm2{clip-path:url("#m2");border-radius:0}
+  .sm3{clip-path:url("#m3");border-radius:0}
+}
+.splat-media img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;display:flex;align-items:flex-end;
+  min-height:min(90svh,780px);padding-top:calc(var(--header-h) + 56px);padding-bottom:clamp(56px,8vw,104px);
+  background:var(--indigo-900);color:#fff;overflow:hidden
+}
+.hero__bg{position:absolute;inset:0}
+.hero__bg img{width:100%;height:100%;object-fit:cover}
+.hero__bg::after{content:"";position:absolute;inset:0;background:linear-gradient(175deg,rgba(42,34,102,.62),rgba(42,34,102,.9))}
+.hero .wrap{position:relative;z-index:1}
+/* The single page-load moment, once per session. */
+.hero.play h1,.hero.play>.wrap>p,.hero.play .btnrow,.hero.play .hero__strip{
+  opacity:0;transform:translateY(14px);animation:rise .5s var(--ease-splat) forwards}
+.hero.play>.wrap>p{animation-delay:.07s}
+.hero.play .btnrow{animation-delay:.14s}
+.hero.play .hero__strip{animation-delay:.21s}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero h1{font-size:var(--fs-hero);line-height:.94;max-width:15ch;margin-bottom:.35em}
+.hero p{font-size:var(--fs-lead);max-width:50ch;color:rgba(255,255,255,.85)}
+@keyframes landing{to{opacity:1;transform:none}}
+.hero__strip{
+  display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:32px;padding-top:24px;max-width:none!important;
+  border-top:1px solid rgba(255,255,255,.22);font-size:.95rem;color:rgba(255,255,255,.85)
+}
+.hero__strip b{font-family:var(--display);font-weight:700;color:var(--yellow)}
+
+/* ---------- cards ---------- */
+.card{
+  background:#fff;border-radius:var(--r-card);padding:26px;
+  box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:10px
+}
+.band--cream .card{box-shadow:var(--shadow-1)}
+.band--dark .card,.band--deep .card{background:var(--indigo-500);color:#fff;box-shadow:none}
+.card p{margin:0}
+.card__foot{margin-top:auto;padding-top:14px}
+
+/* package card */
+.pkg{border:2px solid var(--mist);box-shadow:none;background:#fff}
+.pkg--star{border-color:var(--yellow);border-width:3px;box-shadow:var(--shadow-2)}
+.tag{display:inline-block;padding:3px 14px;border-radius:var(--r-pill);background:var(--yellow);color:var(--ink);font-family:var(--display);font-weight:700;font-size:.85rem}
+.price{font-family:var(--display);font-weight:800;font-size:var(--fs-fig);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:0}
+.price .cur{font-size:.45em;vertical-align:.5em;margin-right:.15em;font-weight:700}
+.price-note{font-size:.9rem;margin:.35em 0 0}
+/* the spec strip — the transparency that nobody else in the category publishes */
+.spec{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--mist);border-radius:var(--r-input);overflow:hidden;margin:4px 0 6px}
+.spec div{background:#fff;padding:10px 8px;text-align:center}
+.spec dt{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:color-mix(in srgb,var(--ink) 60%,transparent);margin:0}
+.spec dd{margin:2px 0 0;font-family:var(--display);font-weight:700;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.ticks{list-style:none;padding:0;margin:0;font-size:.98rem}
+.ticks li{position:relative;padding-left:1.6em;margin-bottom:.35em}
+.ticks li::before{content:"";position:absolute;left:.1em;top:.5em;width:.95em;height:.5em;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+
+/* figure / stat */
+.fig{font-family:var(--display);font-weight:800;font-size:var(--fs-fig);line-height:1;font-variant-numeric:tabular-nums;color:var(--yellow);margin:0 0 .2em}
+.band--cream .fig,.band:not(.band--dark):not(.band--deep) .fig{color:var(--indigo-700)}
+
+/* occasion tile */
+.tile{
+  position:relative;display:flex;flex-direction:column;justify-content:flex-end;
+  min-height:210px;padding:22px;border-radius:var(--r-card);overflow:hidden;
+  color:#fff;background:var(--indigo-500);text-decoration:none
+}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(178deg,rgba(42,34,102,.18) 30%,rgba(42,34,102,.88))}
+.tile>*{position:relative;z-index:1;margin:0}
+.tile p{font-size:.92rem;color:rgba(255,255,255,.85);margin-top:4px}
+
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:1rem}
+.tbl caption{text-align:left;font-size:.9rem;padding-bottom:10px;color:color-mix(in srgb,var(--ink) 66%,transparent)}
+.tbl th,.tbl td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--mist);vertical-align:top}
+.tbl thead th{font-family:var(--display);font-weight:700;font-size:.95rem}
+.tbl td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.band--dark .tbl th,.band--dark .tbl td,.band--deep .tbl th,.band--deep .tbl td{border-color:rgba(255,255,255,.2)}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.scroller table{min-width:640px}
+
+/* FAQ */
+.faq details{border:2px solid var(--mist);border-radius:var(--r-card);padding:18px 22px;margin-bottom:12px;background:#fff}
+.faq summary{
+  font-family:var(--display);font-weight:700;font-size:1.12rem;cursor:pointer;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:18px;min-height:34px
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:0 0 auto;width:11px;height:11px;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg) translate(-2px,-2px);transition:transform .18s var(--ease)}
+.faq details[open] summary::after{transform:rotate(225deg) translate(-2px,-2px)}
+.faq details p{margin:12px 0 0}
+
+/* contact */
+.contact-row{display:grid;gap:14px}
+@media(min-width:700px){.contact-row{grid-template-columns:repeat(3,1fr)}}
+.contact-row a,.contact-row div{
+  display:block;padding:20px;border-radius:var(--r-card);background:rgba(255,255,255,.1);
+  text-decoration:none;border:1px solid rgba(255,255,255,.2)
+}
+.contact-row a:hover{background:rgba(255,255,255,.2)}
+.contact-row b{display:block;font-family:var(--display);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);margin-bottom:4px}
+
+/* footer */
+.ftr{background:var(--indigo-900);color:#fff;padding:56px 0 32px;font-size:.95rem}
+.ftr a{color:rgba(255,255,255,.85)}
+.ftr-grid{display:grid;gap:32px}
+@media(min-width:800px){.ftr-grid{grid-template-columns:1.4fr 1fr 1fr}}
+.ftr ul{list-style:none;padding:0}
+.ftr h2{font-family:var(--display);font-size:1rem;font-weight:700;margin-bottom:.7em}
+.ftr-legal{margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.2);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;color:rgba(255,255,255,.72);font-size:.88rem}
+
+/* sticky mobile CTA */
+.bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  padding:10px 20px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:var(--shadow-2);
+  transform:translateY(0);transition:transform .24s var(--ease)
+}
+.bar[data-hide]{transform:translateY(130%)}
+@media(min-width:1000px){.bar{display:none}}
+@media(max-width:999px){.ftr{padding-bottom:104px}}
+
+/* The whole motion budget switches off here. scroll-behavior included —
+   smooth scroll is a vestibular trigger and the original applied it always. */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  }
 </style>
 </head>
 <body>
+
 <a class="skip" href="#main">Skip to content</a>
-<header class="top"><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark">B</span>Batwana</a><nav class="links" id="nav"><a href="#hire">Hire</a><a href="#occasions">Occasions</a><a href="#safety">Safety</a><a href="#partners">Partners</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="button" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20to%20check%20a%20date." target="_blank" rel="noopener">Check a date</a></nav><button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button></div></header>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<clipPath id="m1" clipPathUnits="objectBoundingBox"><path d="M 0.94 0.42 C 0.96 0.53, 0.92 0.66, 0.84 0.74 C 0.76 0.83, 0.68 0.94, 0.57 0.97 C 0.45 1.00, 0.33 0.97, 0.23 0.90 C 0.13 0.83, 0.05 0.73, 0.02 0.61 C 0.00 0.49, 0.03 0.36, 0.10 0.26 C 0.17 0.15, 0.28 0.06, 0.40 0.03 C 0.52 0.00, 0.65 0.03, 0.76 0.09 C 0.86 0.16, 0.92 0.30, 0.94 0.42 Z"/></clipPath>
+<clipPath id="m2" clipPathUnits="objectBoundingBox"><path d="M 0.97 0.48 C 0.98 0.61, 0.90 0.72, 0.81 0.81 C 0.71 0.90, 0.60 0.99, 0.48 0.98 C 0.36 0.97, 0.25 0.88, 0.16 0.79 C 0.07 0.69, 0.01 0.58, 0.02 0.45 C 0.03 0.33, 0.12 0.22, 0.22 0.13 C 0.32 0.05, 0.44 0.00, 0.57 0.02 C 0.69 0.05, 0.80 0.13, 0.88 0.23 C 0.95 0.32, 0.96 0.40, 0.97 0.48 Z"/></clipPath>
+<clipPath id="m3" clipPathUnits="objectBoundingBox"><path d="M 0.95 0.36 C 0.99 0.48, 0.97 0.62, 0.90 0.73 C 0.82 0.85, 0.70 0.96, 0.57 0.98 C 0.44 0.99, 0.31 0.92, 0.21 0.83 C 0.10 0.74, 0.02 0.62, 0.02 0.49 C 0.02 0.36, 0.10 0.24, 0.20 0.15 C 0.31 0.06, 0.44 0.01, 0.57 0.02 C 0.71 0.04, 0.85 0.16, 0.95 0.36 Z"/></clipPath>
+</defs></svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Batwana — home">
+      <img src="assets/logo/batwana-logo-reversed.png" width="124" height="73" alt="Batwana">
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#hire">Hire</a>
+      <a href="#equipment">What we bring</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#safety">Safety</a>
+      <a href="#partners">Partners</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="hdr-cta">
+      <a class="iconbtn" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20to%20check%20a%20date." target="_blank" rel="noopener" aria-label="Message Batwana on WhatsApp">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.9-.9L3 20l1.1-3.9A8.4 8.4 0 0 1 3 11.5a8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 9 8.4Z"/></svg>
+      </a>
+      <button class="iconbtn burger" type="button" id="burger" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer">
+  <div class="drawer__bg" data-close></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawer__top">
+      <img src="assets/logo/batwana-logo-reversed.png" width="108" height="64" alt="">
+      <button class="iconbtn" type="button" data-close aria-label="Close menu">
+        <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="#hire">Hire</a>
+      <a href="#equipment">What we bring</a>
+      <a href="#occasions">Occasions</a>
+      <a href="#safety">Safety</a>
+      <a href="#partners">Partners</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="drawer__foot">
+      <a class="btn btn--wa" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20an%20event." target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="btn btn--ghost" href="tel:+254702876305">Call +254 702 876 305</a>
+    </div>
+  </div>
+</div>
+
 <main id="main">
-<section class="hero" id="top"><div class="wrap hero-grid"><div><div class="eyebrow">Family fun · Nairobi & surrounding areas</div><h1>Big fun.<br>Handled properly.</h1><p>Batwana brings the equipment, crew, games and energy for children’s events — with supervised activities, clear planning and one team responsible for the day.</p><div class="actions"><a class="button" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20to%20check%20availability." target="_blank" rel="noopener">Check a date</a><a class="button alt" href="#hire" style="color:#fff">See what we bring</a></div></div><aside class="hero-card"><span class="tag">Bring Batwana to you</span><h3>Your event, without the equipment headache.</h3><p>For birthdays, school fun days, corporate family days, estates and community events.</p><ul class="ticks"><li>Setup and teardown handled by our crew</li><li>Supervised equipment and activity zones</li><li>Packages sized for small to large events</li><li>Nairobi service radius, with wider travel quoted separately</li></ul></aside></div></section>
-<div class="wrap proof"><div class="proof-grid"><div class="proof-item"><strong>Supervised</strong><span>Crew assigned to activity areas</span></div><div class="proof-item"><strong>Flexible</strong><span>Home, school, estate or corporate site</span></div><div class="proof-item"><strong>One team</strong><span>Equipment, games, setup and teardown</span></div><div class="proof-item"><strong>Responsive</strong><span>Replies within one working day</span></div></div></div>
-<section class="section" id="hire"><div class="wrap"><div class="head"><div class="eyebrow" style="color:var(--violet)">Hire packages</div><h2>Choose the scale. We’ll shape the fun.</h2><p>Three starting points make planning easier. Final pricing and travel are confirmed with you before booking.</p></div><div class="cards"><article class="card"><div class="icon">🎈</div><h3>Garden party</h3><p>For a smaller birthday or family gathering with the essentials covered.</p><ul class="list"><li>Bouncy castle</li><li>Face painting</li><li>Lawn & scattering games</li><li>2 Batwana crew</li><li>Setup & teardown</li></ul><a class="button alt" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20tell%20me%20about%20the%20Garden%20Party%20package." target="_blank" rel="noopener">Ask about this package</a></article><article class="card accent"><span class="tag">Most versatile</span><div class="icon">✨</div><h3>Full afternoon</h3><p>A fuller mix of inflatables, creative play and treats for a medium-sized event.</p><ul class="list"><li>Bouncy castle + giant slide</li><li>Trampoline</li><li>Face painting + art corner</li><li>Candy floss & popcorn</li><li>4 Batwana crew</li></ul><a class="button" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20tell%20me%20about%20the%20Full%20Afternoon%20package." target="_blank" rel="noopener">Check a date</a></article><article class="card"><div class="icon">🎡</div><h3>The full funpark</h3><p>For bigger school, corporate, estate and community events with multiple activity zones.</p><ul class="list"><li>Obstacle course + giant slide</li><li>Bouncy castle + kiddie train</li><li>Ride-on cars + water play</li><li>Games host & creative corner</li><li>Expanded Batwana crew</li></ul><a class="button alt" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20tell%20me%20about%20the%20Full%20Funpark%20package." target="_blank" rel="noopener">Plan a larger event</a></article></div><p class="note">Package scope, prices, availability, travel and insurance details are confirmed in writing before payment.</p></div></section>
-<section class="section alt" id="occasions"><div class="wrap"><div class="head"><div class="eyebrow" style="color:var(--violet)">Built for real occasions</div><h2>Where children need somewhere brilliant to go.</h2><p>Batwana can be configured around the space, age range, headcount and rhythm of your event.</p></div><div class="occasions"><article class="occasion"><h3>Birthday parties</h3><p>At home, in a hall or in your estate common area.</p></article><article class="occasion"><h3>School fun days</h3><p>Sports days, end-of-term events and prize-giving.</p></article><article class="occasion"><h3>Corporate family days</h3><p>Staff families, one site, all ages entertained.</p></article><article class="occasion"><h3>Estate fun days</h3><p>Residents’ associations and gated communities.</p></article><article class="occasion"><h3>Church & community</h3><p>Large headcounts and broad age ranges.</p></article><article class="occasion"><h3>Mall activations</h3><p>Weekend and seasonal family footfall drivers.</p></article></div></div></section>
-<section class="section" id="safety"><div class="wrap safety-grid"><div class="shield" aria-label="Safety-first operations"></div><div><div class="head" style="margin-bottom:28px"><div class="eyebrow" style="color:var(--violet)">Safety is operational</div><h2>Fun works better when the basics are serious.</h2></div><div class="safety-points"><div class="safety-point"><div class="num">1</div><div><h3>Inspect before use</h3><p>Equipment is checked before dispatch and after setup, with unsuitable units taken out of service.</p></div></div><div class="safety-point"><div class="num">2</div><div><h3>Supervise the activity</h3><p>Crew are assigned to inflatables, water play, rides and games based on the activity.</p></div></div><div class="safety-point"><div class="num">3</div><div><h3>Clean between sessions</h3><p>High-contact and shared play surfaces are cleaned between sessions.</p></div></div><div class="safety-point"><div class="num">4</div><div><h3>Prepare for incidents</h3><p>Events have a named crew lead, first-aid kit and written incident reporting process.</p></div></div></div></div></div></section>
-<section class="section dark" id="partners"><div class="wrap partner"><div><div class="eyebrow">Partners</div><h2 style="font-size:clamp(2.3rem,4.3vw,4.2rem);font-family:'Baloo 2';line-height:1.05;margin:0 0 22px">Turn family space into repeat footfall.</h2><p style="font-size:1.1rem;color:rgba(255,255,255,.76)">For malls, property managers, schools, employers and community organisations, Batwana can operate recurring or event-based family entertainment formats.</p><div class="actions"><a class="button" href="mailto:batwanakenyaltd@gmail.com?subject=Batwana%20partnership%20enquiry">Discuss a partnership</a><a class="button alt" href="tel:+254702876305" style="color:#fff">Call us</a></div></div><aside class="panel"><h3>A useful partner when you need:</h3><ul><li>A professionally managed children’s activity zone</li><li>Flexible equipment mixes for different spaces</li><li>Setup, operation and teardown handled by one crew</li><li>Weekend, holiday or one-off activation formats</li></ul></aside></div></section>
-<section class="section alt" id="faq"><div class="wrap faq"><div class="head"><div class="eyebrow" style="color:var(--violet)">FAQ</div><h2>Before you book.</h2></div><details><summary>How far does Batwana travel?</summary><p>Our standard planning radius is up to 40 km from Nairobi. Events farther away can still be considered, with travel quoted separately before booking.</p></details><details><summary>How early should I book?</summary><p>Lead time depends on event size. Smaller events can usually be planned sooner; larger funpark-style events need more setup and coordination. Send the date and headcount first and we’ll confirm what is realistic.</p></details><details><summary>Do you provide crew?</summary><p>Yes. Packages include Batwana crew for setup, equipment operation and activity supervision. Exact staffing depends on the equipment and headcount.</p></details><details><summary>Can you work with schools and companies?</summary><p>Yes. We support school fun days, corporate family days, estates, community events and other organised family occasions.</p></details><details><summary>How do I confirm a booking?</summary><p>Start by checking your date. We confirm scope, location, final price, travel and payment terms in writing before any payment is requested.</p></details></div></section>
-<section class="section" id="contact"><div class="wrap"><div class="contact-box"><div><div class="eyebrow">Start with the date</div><h2>Tell us what you’re planning.</h2><p>Send the date, location, approximate number of children and the kind of event. We’ll come back to you within one working day.</p><div class="actions"><a class="button wa" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20an%20event." target="_blank" rel="noopener">WhatsApp Batwana</a><a class="button alt" href="mailto:batwanakenyaltd@gmail.com" style="color:#fff">Email us</a></div></div><div class="contact-meta"><a href="tel:+254702876305"><strong>Call</strong><br>+254 702 876 305</a><a href="mailto:batwanakenyaltd@gmail.com"><strong>Email</strong><br>batwanakenyaltd@gmail.com</a><a href="#"><strong>Based in</strong><br>Nairobi, Kenya</a></div></div></div></section>
+<span id="top"></span>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="hero">
+  <div class="hero__bg"><img src="assets/photos/hero.svg" alt="" width="1600" height="900" fetchpriority="high"></div>
+  <div class="confetti" aria-hidden="true">
+    <i style="--c:var(--yellow);--d:12px;top:24%;left:7%"></i>
+    <i style="--c:var(--pink);--d:16px;top:68%;left:90%"></i>
+    <i style="--c:var(--green);--d:10px;top:84%;left:17%"></i>
+    <i style="--c:var(--amber);--d:14px;top:30%;left:82%"></i>
+    <i style="--c:var(--yellow);--d:9px;top:55%;left:71%"></i>
+  </div>
+  <div class="wrap">
+    <p class="eyebrow">Nairobi &amp; 40 km around it</p>
+    <h1>We bring the funpark to you.</h1>
+    <p>Inflatables, rides, water play, games and trained crew — delivered to your home,
+       school or office, set up, run, and cleared away. You host. We work.</p>
+    <div class="btnrow" style="margin-top:26px">
+      <a class="btn" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20to%20check%20a%20date.%20Date%3A%20%2C%20children%3A%20%2C%20location%3A%20" target="_blank" rel="noopener">Check a date</a>
+      <a class="btn btn--ghost" href="#equipment">See what we bring</a>
+    </div>
+    <p class="hero__strip">
+      <span><b>From KES 35,000</b> for a garden party</span>
+      <span><b>1 crew member</b> on every inflatable</span>
+      <span><b>1 working day</b> to reply</span>
+    </p>
+  </div>
+</section>
+
+<div class="divider to-paper from-deep" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="180" cy="152" r="8"/><circle cx="612" cy="164" r="6"/><circle cx="948" cy="146" r="10"/><path d="M0 182V54c92-26 168 22 258 14s150-52 244-44 168 62 266 54 168-58 268-44 118 34 164 42v106Z"/></g></svg></div>
+
+<!-- ============================ HIRE ============================ -->
+<section class="band" id="hire" aria-labelledby="hire-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Hire packages</p>
+      <h2 id="hire-h">Three sizes. Everything included.</h2>
+      <p class="lead muted">Prices are starting points for Nairobi and cover delivery, setup, crew,
+        supervision and teardown. Nothing is charged until we have confirmed your date in writing.</p>
+    </div>
+
+    <div class="grid g3">
+      <article class="card pkg">
+        <h3>Garden party</h3>
+        <p class="price"><span class="cur">KES</span>35,000</p>
+        <p class="price-note muted">from</p>
+        <dl class="spec">
+          <div><dt>Children</dt><dd>15</dd></div>
+          <div><dt>Hours</dt><dd>3</dd></div>
+          <div><dt>Crew</dt><dd>2</dd></div>
+        </dl>
+        <ul class="ticks">
+          <li>Bouncy castle</li>
+          <li>Face painting</li>
+          <li>Lawn &amp; scattering games</li>
+          <li>Setup and teardown</li>
+          <li>Public liability cover</li>
+        </ul>
+        <p class="price-note muted">Extra children KES 700 each, up to 25. Travel within 15 km included.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm" style="width:100%" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20the%20Garden%20Party%20package.%20Date%3A%20%2C%20children%3A%20" target="_blank" rel="noopener">Check a date</a>
+        </div>
+      </article>
+
+      <article class="card pkg pkg--star">
+        <p><span class="tag">Most booked</span></p>
+        <h3>Full afternoon</h3>
+        <p class="price"><span class="cur">KES</span>68,000</p>
+        <p class="price-note muted">from</p>
+        <dl class="spec">
+          <div><dt>Children</dt><dd>30</dd></div>
+          <div><dt>Hours</dt><dd>4</dd></div>
+          <div><dt>Crew</dt><dd>4</dd></div>
+        </dl>
+        <ul class="ticks">
+          <li>Bouncy castle and giant slide</li>
+          <li>Trampoline</li>
+          <li>Face painting and art corner</li>
+          <li>Candy floss and popcorn</li>
+          <li>Setup, teardown, liability cover</li>
+        </ul>
+        <p class="price-note muted">Extra children KES 650 each, up to 50. Travel within 25 km included.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm" style="width:100%" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27d%20like%20the%20Full%20Afternoon%20package.%20Date%3A%20%2C%20children%3A%20" target="_blank" rel="noopener">Check a date</a>
+        </div>
+      </article>
+
+      <article class="card pkg">
+        <h3>The full funpark</h3>
+        <p class="price"><span class="cur">KES</span>145,000</p>
+        <p class="price-note muted">from</p>
+        <dl class="spec">
+          <div><dt>Children</dt><dd>60</dd></div>
+          <div><dt>Hours</dt><dd>5</dd></div>
+          <div><dt>Crew</dt><dd>8</dd></div>
+        </dl>
+        <ul class="ticks">
+          <li>Obstacle course and giant slide</li>
+          <li>Kiddie train and ride-on cars</li>
+          <li>Supervised water play</li>
+          <li>Games host and creative corner</li>
+          <li>Setup, teardown, liability cover</li>
+        </ul>
+        <p class="price-note muted">Extra children KES 600 each, up to 150. Travel within 40 km included.</p>
+        <div class="card__foot">
+          <a class="btn btn--sm" style="width:100%" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20a%20larger%20event.%20Date%3A%20%2C%20children%3A%20%2C%20venue%3A%20" target="_blank" rel="noopener">Plan a larger event</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="band__head" style="margin:clamp(48px,6vw,80px) 0 clamp(24px,3vw,36px)">
+      <h3 style="font-size:var(--fs-h3)">What moves the price</h3>
+      <p class="muted">Most companies in this category will not tell you. Here is the whole list.</p>
+    </div>
+    <div class="scroller">
+      <table class="tbl">
+        <caption>Everything that changes a Batwana quotation</caption>
+        <tbody>
+          <tr><th scope="row">Distance from the CBD</th><td>Included to your package limit, then charged by band. Beyond 40 km we quote before you commit.</td></tr>
+          <tr><th scope="row">Hours on site</th><td>KES 8,000 for each hour past the package duration.</td></tr>
+          <tr><th scope="row">Number of children</th><td>Charged per child above the number included.</td></tr>
+          <tr><th scope="row">Power</th><td>Inflatables and food carts need mains power. No mains means a generator, at KES 11,000.</td></tr>
+          <tr><th scope="row">Ground conditions</th><td>Soft or sloping ground rules out some inflatables entirely. We will say so rather than risk it.</td></tr>
+          <tr><th scope="row">Water access</th><td>Water play needs a tap within reach and somewhere to drain.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider to-cream from-paper" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="322" cy="158" r="7"/><circle cx="742" cy="150" r="9"/><circle cx="1050" cy="166" r="5"/><path d="M0 182V72c110 34 176-30 280-22s154 60 250 52 156-64 258-52 156 54 254 42 118-30 158-38v128Z"/></g></svg></div>
+
+<!-- ========================== EQUIPMENT ========================== -->
+<section class="band band--cream" id="equipment" aria-labelledby="eq-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">What we bring</p>
+      <h2 id="eq-h">Measure your space before you book.</h2>
+      <p class="lead muted">Every unit below lists the ground it needs in metres and the power it draws.
+        Nobody else in this market publishes that, and it is the thing that decides whether your
+        Saturday works.</p>
+    </div>
+    <div class="scroller">
+      <table class="tbl">
+        <caption>Space, power and capacity for the equipment we bring most often</caption>
+        <thead>
+          <tr><th scope="col">Equipment</th><th scope="col">Ages</th><th scope="col">Space needed</th><th scope="col">Power</th><th scope="col">At a time</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Bouncy castle</th><td class="num">2–10</td><td class="num">5 × 5 m</td><td>1 socket, 0.8 kW</td><td class="num">8 children</td></tr>
+          <tr><th scope="row">Inflatable obstacle course</th><td class="num">5–14</td><td class="num">15 × 4 m</td><td>1 socket, 1.5 kW</td><td class="num">4 racing</td></tr>
+          <tr><th scope="row">Giant slide</th><td class="num">4–12</td><td class="num">8 × 5 m</td><td>1 socket, 1.1 kW</td><td class="num">1 per lane</td></tr>
+          <tr><th scope="row">Trampoline</th><td class="num">4–14</td><td class="num">4 × 4 m</td><td>None</td><td class="num">4 children</td></tr>
+          <tr><th scope="row">Kiddie train</th><td class="num">2–9</td><td class="num">20 m circuit</td><td>Battery</td><td class="num">12 per ride</td></tr>
+          <tr><th scope="row">Electric ride-on cars</th><td class="num">2–7</td><td class="num">10 × 8 m</td><td>Charged on arrival</td><td class="num">6 cars</td></tr>
+          <tr><th scope="row">Kids' water pool</th><td class="num">2–10</td><td class="num">6 × 6 m</td><td>1 socket + water point</td><td class="num">10 children</td></tr>
+          <tr><th scope="row">Face painting</th><td class="num">2–14</td><td class="num">2 × 2 m + shade</td><td>None</td><td class="num">~20 an hour</td></tr>
+          <tr><th scope="row">Candy floss / popcorn</th><td class="num">All</td><td class="num">1.5 × 1.5 m</td><td>1 socket, 1.4 kW</td><td class="num">~70 an hour</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:26px">
+      <a class="btn btn--wa" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20my%20space%20is%20about%20___%20m%20x%20___%20m.%20What%20would%20fit%3F" target="_blank" rel="noopener">
+        Send us your dimensions and we will tell you what fits</a>
+    </p>
+  </div>
+</section>
+
+<div class="divider to-paper flip from-cream" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="240" cy="150" r="9"/><circle cx="860" cy="160" r="6"/><path d="M0 182V60c96 22 158-26 254-18s160 56 254 48 160-58 258-48 122 32 176 40 158-4 258-22v122Z"/></g></svg></div>
+
+<!-- ========================== OCCASIONS ========================== -->
+<section class="band" id="occasions" aria-labelledby="oc-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Built for real occasions</p>
+      <h2 id="oc-h">Wherever children need somewhere brilliant to go.</h2>
+      <p class="lead muted">The equipment mix, the crew count and the running order change with the
+        space, the ages and the headcount. The one thing that does not change is that we run it.</p>
+    </div>
+    <div class="grid g6">
+      <a class="tile" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20a%20birthday%20party." target="_blank" rel="noopener">
+        <img src="assets/photos/party-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>Birthday parties</h3><p>At home, in a hall, or in your estate's common area.</p></a>
+      <a class="tile" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20enquiring%20about%20a%20school%20fun%20day." target="_blank" rel="noopener">
+        <img src="assets/photos/school-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>School fun days</h3><p>Sports days, end-of-term events and prize-giving.</p></a>
+      <a class="tile" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20enquiring%20about%20a%20corporate%20family%20day." target="_blank" rel="noopener">
+        <img src="assets/photos/corporate-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>Corporate family days</h3><p>Staff families, one site, every age entertained.</p></a>
+      <a class="tile" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20enquiring%20about%20an%20estate%20fun%20day." target="_blank" rel="noopener">
+        <img src="assets/photos/crew-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>Estate fun days</h3><p>Residents' associations and gated communities.</p></a>
+      <a class="tile" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20enquiring%20about%20a%20community%20day." target="_blank" rel="noopener">
+        <img src="assets/photos/safety-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>Church &amp; community</h3><p>Large headcounts and wide age ranges.</p></a>
+      <a class="tile" href="#partners">
+        <img src="assets/photos/partners-slot.svg" alt="" width="900" height="700" loading="lazy">
+        <h3>Mall activations</h3><p>Weekend and seasonal family footfall drivers.</p></a>
+    </div>
+  </div>
+</section>
+
+<div class="divider to-dark from-paper" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="410" cy="156" r="8"/><circle cx="800" cy="168" r="5"/><circle cx="1100" cy="148" r="10"/><path d="M0 182V66c84 30 166-24 260-16s148 58 244 50 162-62 262-50 150 52 250 40 138-28 184-36v128Z"/></g></svg></div>
+
+<!-- ============================ SAFETY ============================ -->
+<section class="band band--dark" id="safety" aria-labelledby="sf-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Safety is a number, not an adjective</p>
+      <h2 id="sf-h">Somebody is watching. That somebody is us.</h2>
+      <p class="lead muted">These are the ratios we roster to. If we cannot staff your event to them,
+        we will tell you and reduce the equipment rather than stretch the crew.</p>
+    </div>
+
+    <div class="grid g4" style="margin-bottom:clamp(36px,4vw,56px)">
+      <div><p class="fig">1 : 1</p><h3 style="font-size:1.05rem">Per inflatable</h3><p class="muted" style="font-size:.95rem">A named crew member on the unit, for the whole session.</p></div>
+      <div><p class="fig">1 : 5</p><h3 style="font-size:1.05rem">On water play</h3><p class="muted" style="font-size:.95rem">Shallow pools, constant supervision, no exceptions.</p></div>
+      <div><p class="fig">2 ×</p><h3 style="font-size:1.05rem">Inspected</h3><p class="muted" style="font-size:.95rem">Before it leaves the depot, and again after setup.</p></div>
+      <div><p class="fig">1 : 20</p><h3 style="font-size:1.05rem">Games and creative</h3><p class="muted" style="font-size:.95rem">One trained host per twenty children.</p></div>
+    </div>
+
+    <div class="grid g2">
+      <div>
+        <h3>Equipment</h3>
+        <ul class="ticks">
+          <li>Checked against a written list before dispatch and again after setup</li>
+          <li>Anchored to manufacturer specification; we do not run inflatables in high wind</li>
+          <li>Age and weight limits posted at each unit and enforced by the crew on it</li>
+          <li>Any unit that fails inspection is taken out of service and cannot be booked</li>
+        </ul>
+      </div>
+      <div>
+        <h3>People and hygiene</h3>
+        <ul class="ticks">
+          <li>First-aid trained crew and a stocked kit on every site</li>
+          <li>A named crew lead per event, whose number you get the day before</li>
+          <li>High-contact play surfaces cleaned between sessions</li>
+          <li>Written incident reporting, shared with you within 24 hours</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:32px;font-size:.95rem">
+      Public liability cover is in force for every event. Ask and we will send the certificate
+      with your quotation, before you pay anything.</p>
+  </div>
+</section>
+
+<div class="divider to-paper flip from-dark" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="290" cy="162" r="6"/><circle cx="680" cy="150" r="9"/><circle cx="1010" cy="158" r="7"/><path d="M0 182V58c104 28 162-22 258-14s156 58 252 50 158-60 256-50 146 48 246 38 150-22 188-32v132Z"/></g></svg></div>
+
+<!-- ============================ PARTNERS ============================ -->
+<section class="band" id="partners" aria-labelledby="pt-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Partners</p>
+      <h2 id="pt-h">Turn family space into repeat footfall.</h2>
+      <p class="lead muted">For malls, property managers and estates. A family anchor is the difference
+        between a centre people pass through and a centre people spend Saturday in.</p>
+    </div>
+
+    <div class="grid g3" style="margin-bottom:clamp(36px,4vw,56px)">
+      <div class="card">
+        <h3>Revenue share</h3>
+        <p class="muted">Batwana funds the equipment and fit-out. You provide the space, power, water and services. Gross revenue splits on an agreed percentage, reported monthly.</p>
+        <ul class="ticks" style="font-size:.94rem"><li>No capital cost to the landlord</li><li>Batwana carries the operating risk</li></ul>
+      </div>
+      <div class="card">
+        <h3>Lease plus management fee</h3>
+        <p class="muted">You fund the build and own the asset. Batwana staffs and operates it for a fixed management fee plus a performance element.</p>
+        <ul class="ticks" style="font-size:.94rem"><li>Landlord owns the asset</li><li>Fastest route to opening</li></ul>
+      </div>
+      <div class="card">
+        <h3>Turnkey build and operate</h3>
+        <p class="muted">Batwana designs, builds, staffs and runs the whole centre, and pays rent like any other tenant.</p>
+        <ul class="ticks" style="font-size:.94rem"><li>A conventional lease</li><li>No operating involvement</li></ul>
+      </div>
+    </div>
+
+    <div class="scroller">
+      <table class="tbl">
+        <caption>What a site needs before we can quote</caption>
+        <tbody>
+          <tr><th scope="row">Floor area</th><td>From 200 m² indoors, up to 2,000 m² for a mixed indoor and outdoor funpark.</td></tr>
+          <tr><th scope="row">Power</th><td>Single phase for a small format; three phase for larger rides and simulators.</td></tr>
+          <tr><th scope="row">Water and drainage</th><td>Required for any water play. We survey before quoting.</td></tr>
+          <tr><th scope="row">Lead time</th><td>Three weeks for a pop-up. Eight to sixteen weeks for a permanent fit-out.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="btnrow" style="margin-top:30px">
+      <a class="btn" href="mailto:batwanakenyaltd@gmail.com?subject=Batwana%20partnership%20enquiry&amp;body=Site%3A%20%0AApproximate%20area%3A%20%0AIndoor%20or%20outdoor%3A%20%0A">Send us a floor plan</a>
+      <a class="btn btn--ghost" href="tel:+254702876305">Call +254 702 876 305</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider to-cream from-paper" aria-hidden="true"><svg viewBox="0 0 1200 182" preserveAspectRatio="none"><g fill="currentColor"><circle cx="360" cy="152" r="8"/><circle cx="900" cy="164" r="6"/><path d="M0 182V70c98 26 170-28 266-20s150 62 246 54 164-66 264-54 144 50 244 40 142-26 180-34v126Z"/></g></svg></div>
+
+<!-- ============================== FAQ ============================== -->
+<section class="band band--cream faq" id="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Before you book</p>
+      <h2 id="fq-h">The questions we actually get asked.</h2>
+    </div>
+
+    <details><summary>How much does it cost?</summary><p>A garden party starts at KES 35,000, a full afternoon at KES 68,000 and the full funpark at KES 145,000. Those cover delivery, setup, crew, supervision and teardown for the headcount and travel band listed on each package. The table above lists everything that moves the number, so there are no surprises when the quotation arrives.</p></details>
+
+    <details><summary>What space do I need?</summary><p>Every item in the equipment table lists its footprint in metres and the power it draws. Measure the flattest part of your compound, send us the number, and we will tell you what fits. If you are unsure, send a photo on WhatsApp and we will work it out from that.</p></details>
+
+    <details><summary>What if there is no power?</summary><p>Inflatables and food carts need mains power. If you do not have it, we bring a generator, fuelled, with a crew member responsible for it, at KES 11,000.</p></details>
+
+    <details><summary>How far do you travel?</summary><p>Travel within 15 km of the CBD is included in the garden party price, 25 km on the full afternoon and 40 km on the full funpark. Beyond that we quote the travel charge in writing before you pay anything.</p></details>
+
+    <details><summary>How early should I book?</summary><p>Three days for a garden party, five for a full afternoon and ten for the full funpark. Saturdays in November and December book out six to eight weeks ahead, so those need more notice.</p></details>
+
+    <details><summary>What happens if it rains?</summary><p>For outdoor bookings we make the call by 6pm the day before and tell you on WhatsApp. If we cancel for weather, you reschedule free of charge. If the weather turns during the event, the crew lead on site decides whether an activity continues, on safety grounds only.</p></details>
+
+    <details><summary>Are your staff supervising, or am I?</summary><p>Ours. Every inflatable and every water activity has a named Batwana crew member on it for the whole session. You are not running the party, and neither are the parents you invited. Our ratios are published above.</p></details>
+
+    <details><summary>How do I pay, and can I cancel?</summary><p>A 50% deposit by M-PESA confirms the date; the balance is due on the day. Fourteen days or more before the event the deposit is refundable less the transaction fee, or transferable to a new date. Seven to thirteen days it transfers once. Under seven days it is forfeit. If we cancel for any reason, you reschedule free or take a full refund.</p></details>
+
+    <details><summary>Can you work with schools and companies?</summary><p>Yes. Schools and corporates can pay against an invoice on agreed terms, and we provide the insurance certificate, a written risk assessment and our safeguarding policy with the quotation. We need the LPO before we schedule crew.</p></details>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="band band--deep" id="contact" aria-labelledby="ct-h">
+  <div class="confetti" aria-hidden="true">
+    <i style="--c:var(--pink);--d:12px;top:16%;left:6%"></i>
+    <i style="--c:var(--amber);--d:9px;top:78%;left:93%"></i>
+  </div>
+  <div class="wrap">
+    <div class="band__head">
+      <p class="eyebrow">Start with the date</p>
+      <h2 id="ct-h">Tell us what you're planning.</h2>
+      <p class="lead muted">The date, roughly how many children, and where. That is enough for us to
+        confirm we are free and send you a firm price. We reply within one working day.</p>
+      <div class="btnrow" style="margin-top:22px">
+        <a class="btn btn--wa" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20an%20event.%20Date%3A%20%2C%20children%3A%20%2C%20location%3A%20" target="_blank" rel="noopener">WhatsApp Batwana</a>
+        <a class="btn btn--ghost" href="mailto:batwanakenyaltd@gmail.com?subject=Event%20enquiry&amp;body=Date%3A%20%0ANumber%20of%20children%3A%20%0ALocation%3A%20%0AType%20of%20event%3A%20">Email us</a>
+      </div>
+    </div>
+    <div class="contact-row">
+      <a href="tel:+254702876305"><b>Call</b>+254 702 876 305</a>
+      <a href="mailto:batwanakenyaltd@gmail.com"><b>Email</b>batwanakenyaltd@gmail.com</a>
+      <div><b>Based in</b>Nairobi, Kenya · P.O. Box 1051-00520</div>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="footer"><div class="wrap footer-row"><a class="brand" href="#top"><span class="brand-mark">B</span>Batwana</a><small>Batwana Kenya Limited · Nairobi, Kenya · © 2026</small></div></footer>
-<script>const m=document.getElementById('menu'),n=document.getElementById('nav');m.addEventListener('click',()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',String(o))});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');m.setAttribute('aria-expanded','false')}));</script>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <img src="assets/logo/batwana-logo-reversed.png" width="142" height="84" alt="Batwana Kenya Limited">
+        <p style="margin-top:14px;color:rgba(255,255,255,.82)">Children's and family entertainment across
+          Nairobi County and beyond — kids' entertainment, event planning, and recreational and
+          amusement park management.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#hire">Hire packages</a></li>
+          <li><a href="#equipment">What we bring</a></li>
+          <li><a href="#occasions">Occasions</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li><a href="tel:+254702876305">+254 702 876 305</a></li>
+          <li><a href="mailto:batwanakenyaltd@gmail.com">batwanakenyaltd@gmail.com</a></li>
+          <li>P.O. Box 1051-00520, Nairobi</li>
+          <li>Mon–Fri 08:00–17:00 · Sat 08:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-legal">
+      <p style="margin:0">&copy; <span id="yr">2026</span> Batwana Kenya Limited · Nairobi, Kenya</p>
+      <p style="margin:0">Prices are indicative and confirmed in writing before payment.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="btn btn--wa btn--sm" href="https://wa.me/254702876305?text=Hi%20Batwana%2C%20I%27m%20planning%20an%20event." target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn btn--sm" href="tel:+254702876305">Call us</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "@id":"https://dansamuka.github.io/batwana-web/#business",
+  "name":"Batwana Kenya Limited",
+  "alternateName":"Batwana",
+  "description":"Children's and family entertainment hire across Nairobi — inflatables, rides, water play, games and trained crew, delivered and run at your venue.",
+  "url":"https://dansamuka.github.io/batwana-web/",
+  "telephone":"+254702876305",
+  "email":"batwanakenyaltd@gmail.com",
+  "image":"https://dansamuka.github.io/batwana-web/assets/logo/batwana-logo-reversed.png",
+  "logo":"https://dansamuka.github.io/batwana-web/assets/logo/batwana-logo-reversed.png",
+  "priceRange":"KES 35,000 – KES 145,000+",
+  "currenciesAccepted":"KES",
+  "paymentAccepted":"M-PESA, Cash, Invoice",
+  "address":{"@type":"PostalAddress","postOfficeBoxNumber":"1051-00520","addressLocality":"Nairobi","addressRegion":"Nairobi County","addressCountry":"KE"},
+  "areaServed":[{"@type":"City","name":"Nairobi"},{"@type":"AdministrativeArea","name":"Nairobi County"}],
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"10:00","closes":"17:00"}
+  ],
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog","name":"Funpark hire packages",
+    "itemListElement":[
+      {"@type":"Offer","name":"Garden party","price":"35000","priceCurrency":"KES","description":"Up to 15 children, 3 hours, 2 crew. Bouncy castle, face painting and lawn games."},
+      {"@type":"Offer","name":"Full afternoon","price":"68000","priceCurrency":"KES","description":"Up to 30 children, 4 hours, 4 crew. Inflatables, creative corner and treats."},
+      {"@type":"Offer","name":"The full funpark","price":"145000","priceCurrency":"KES","description":"Up to 60 children, 5 hours, 8 crew. Multiple activity zones including water play."}
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How much does it cost?","acceptedAnswer":{"@type":"Answer","text":"A garden party starts at KES 35,000, a full afternoon at KES 68,000 and the full funpark at KES 145,000, covering delivery, setup, crew, supervision and teardown."}},
+    {"@type":"Question","name":"What space do I need?","acceptedAnswer":{"@type":"Answer","text":"Every item lists its footprint in metres and the power it draws. A bouncy castle needs 5 by 5 metres and one socket; an obstacle course needs 15 by 4 metres."}},
+    {"@type":"Question","name":"How far do you travel?","acceptedAnswer":{"@type":"Answer","text":"Travel within 15 km of the Nairobi CBD is included on the garden party, 25 km on the full afternoon and 40 km on the full funpark. Beyond that, travel is quoted in writing before payment."}},
+    {"@type":"Question","name":"What happens if it rains?","acceptedAnswer":{"@type":"Answer","text":"For outdoor bookings Batwana makes the weather call by 6pm the day before. If Batwana cancels, you reschedule free of charge."}},
+    {"@type":"Question","name":"Are your staff supervising, or am I?","acceptedAnswer":{"@type":"Answer","text":"Batwana crew supervise. One crew member is assigned to every inflatable and water play runs at one crew member per five children."}},
+    {"@type":"Question","name":"How do I pay, and can I cancel?","acceptedAnswer":{"@type":"Answer","text":"A 50% deposit by M-PESA confirms the date and the balance is due on the day. Fourteen days or more before the event the deposit is refundable less the transaction fee or transferable to a new date."}}
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* header background on scroll */
+  var hdr = document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('stuck', scrollY > 60); }
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  /* hero splats land once per session */
+  var hero = document.getElementById('hero');
+  if (hero && !reduced && !sessionStorage.getItem('bw-hero')) {
+    hero.classList.add('play');
+    try { sessionStorage.setItem('bw-hero','1'); } catch(e){}
+  }
+
+  /* drawer, with focus trap and Escape — the original had neither */
+  var drawer = document.getElementById('drawer'),
+      burger = document.getElementById('burger'),
+      lastFocus = null;
+
+  function items(){
+    return [].slice.call(drawer.querySelectorAll('a[href],button'))
+             .filter(function(el){ return el.offsetParent !== null; });
+  }
+  function open(){
+    lastFocus = document.activeElement;
+    drawer.setAttribute('data-open','');
+    burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+    var f = items(); if (f.length) f[0].focus();
+  }
+  function close(){
+    drawer.removeAttribute('data-open');
+    burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  burger.addEventListener('click', open);
+  [].forEach.call(drawer.querySelectorAll('[data-close]'), function(el){
+    el.addEventListener('click', close);
+  });
+  [].forEach.call(drawer.querySelectorAll('nav a'), function(a){
+    a.addEventListener('click', close);
+  });
+  drawer.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key !== 'Tab') return;
+    var f = items(); if (!f.length) return;
+    var first = f[0], last = f[f.length-1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  /* droplet ripple — the only decorative motion, and the user triggers it */
+  if (!reduced) {
+    document.addEventListener('pointerdown', function(e){
+      var b = e.target.closest ? e.target.closest('.btn') : null;
+      if (!b || b.classList.contains('btn--ghost')) return;
+      var r = b.getBoundingClientRect(), s = document.createElement('span');
+      s.className = 'ink';
+      s.style.width = s.style.height = (Math.max(r.width, r.height) * 2.2) + 'px';
+      s.style.left = (e.clientX - r.left) + 'px';
+      s.style.top  = (e.clientY - r.top)  + 'px';
+      b.appendChild(s);
+      setTimeout(function(){ s.remove(); }, 330);
+    });
+  }
+
+  /* sticky bar hides while scrolling up */
+  var bar = document.getElementById('bar'), last = scrollY;
+  addEventListener('scroll', function(){
+    var y = scrollY;
+    if (y < last && y > 300) bar.setAttribute('data-hide','');
+    else bar.removeAttribute('data-hide');
+    last = y;
+  }, {passive:true});
+
+  /* copyright year can never go stale */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
 </body>
 </html>
