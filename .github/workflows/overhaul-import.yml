@@ -1,0 +1,46 @@
+name: Import Batwana overhaul
+
+on:
+  push:
+    branches: [gh-pages]
+    paths:
+      - '.overhaul/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconstruct and verify site package
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            .overhaul/part-00.b64 \
+            .overhaul/part-01.b64 \
+            .overhaul/part-02a.b64 .overhaul/part-02b.b64 .overhaul/part-02c.b64 .overhaul/part-02d.b64 \
+            .overhaul/part-03a.b64 .overhaul/part-03b.b64 .overhaul/part-03c.b64 .overhaul/part-03d.b64 \
+            .overhaul/part-04.b64 \
+            .overhaul/part-05.b64 \
+            .overhaul/part-06a.b64 .overhaul/part-06b.b64 .overhaul/part-06c.b64 .overhaul/part-06d.b64 \
+            .overhaul/part-07a.b64 .overhaul/part-07b.b64 .overhaul/part-07c.b64 \
+            > /tmp/batwana-overhaul.b64
+          base64 --decode /tmp/batwana-overhaul.b64 > /tmp/batwana-overhaul.zip
+          echo "53b9d80e0dbe6a9197beccd65b53886dad041057121dd0a8f048d26b169b6ff4  /tmp/batwana-overhaul.zip" | sha256sum -c -
+          mkdir -p /tmp/batwana-overhaul
+          unzip -q /tmp/batwana-overhaul.zip -d /tmp/batwana-overhaul
+          rsync -a --delete --exclude='.git' /tmp/batwana-overhaul/ ./
+      - name: Commit overhaul
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "dansamuka"
+          git config user.email "dansamuka@gmail.com"
+          git add -A
+          git commit -m "Replace site with Batwana overhaul"
+          git push origin HEAD:gh-pages
