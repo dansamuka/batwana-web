@@ -1,0 +1,135 @@
+name: Lock static no-blur hero
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/lock-static-hero.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove hero blur and crossfade fallback
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path("index.html")
+          s = p.read_text(encoding="utf-8")
+
+          # 1) Permanently keep the old motion/connection-tier hero path disabled.
+          s = s.replace(
+              "document.documentElement.setAttribute('data-tier', tier);",
+              "document.documentElement.setAttribute('data-tier', 'static');"
+          )
+
+          # 2) Remove the only explicit blur from the legacy act as well.
+          s = s.replace(
+              ".act__still{filter:blur(18px) saturate(1.05);transform:scale(1.06)}",
+              ".act__still{filter:none!important;transform:none!important}"
+          )
+
+          # 3) Use one image only. No crossfade means no purple gap between frames.
+          old = '''    <img class="hero__slide" src="assets/photos/hero-01.webp?v=crisp-final-20260905" alt="" width="1672" height="941" fetchpriority="high">
+    <img class="hero__slide" src="assets/photos/hero-02.webp?v=crisp-final-20260905" alt="" width="1672" height="941" decoding="async">
+    <img class="hero__slide" src="assets/photos/hero-03.webp?v=crisp-final-20260905" alt="" width="1672" height="941" decoding="async">
+    <img class="hero__slide" src="assets/photos/hero-04.webp?v=crisp-final-20260905" alt="" width="1672" height="941" decoding="async">'''
+          new = '''    <img class="hero__slide" src="assets/photos/hero-01.webp?v=static-no-blur-20260906" alt="" width="1672" height="941" fetchpriority="high" decoding="sync">'''
+          if old in s:
+              s = s.replace(old, new, 1)
+          else:
+              # Idempotent fallback if an earlier run already changed the markup.
+              import re
+              s = re.sub(
+                  r'    <img class="hero__slide" src="assets/photos/hero-01\.webp[^\n]*\n(?:    <img class="hero__slide" src="assets/photos/hero-0[234]\.webp[^\n]*\n?){0,3}',
+                  new + "\n",
+                  s,
+                  count=1,
+              )
+
+          # Bust the preload cache too.
+          s = s.replace(
+              'assets/photos/hero-01.webp?v=crisp-final-20260905',
+              'assets/photos/hero-01.webp?v=static-no-blur-20260906'
+          )
+
+          # 4) Final CSS lock: no image animation, no opacity cycling, no transforms,
+          #    no filters, no hidden hero. The image remains visible continuously.
+          marker = "/* STATIC HERO LOCK — no blur, no crossfade, no purple fallback */"
+          if marker not in s:
+              override = r'''
+
+/* STATIC HERO LOCK — no blur, no crossfade, no purple fallback */
+.act{display:none!important}
+.act__still,.act__canvas{
+  filter:none!important;
+  transform:none!important;
+}
+.hero{
+  display:flex!important;
+  background:var(--indigo-900)!important;
+}
+.hero__bg{
+  position:absolute!important;
+  inset:0!important;
+  background:var(--indigo-900)!important;
+}
+.hero__slide{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  opacity:1!important;
+  animation:none!important;
+  transition:none!important;
+  transform:none!important;
+  filter:none!important;
+  image-rendering:auto!important;
+  will-change:auto!important;
+}
+.hero__slide:not(:first-child){display:none!important}
+.hero__bg::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(28,23,66,.52) 0%,
+    rgba(28,23,66,.28) 46%,
+    rgba(28,23,66,.08) 100%)!important;
+}
+@media(max-width:700px){
+  .hero__slide{object-position:68% center!important}
+  .hero__bg::after{
+    background:linear-gradient(180deg,
+      rgba(18,15,48,.10) 0%,
+      rgba(18,15,48,.08) 36%,
+      rgba(18,15,48,.26) 68%,
+      rgba(18,15,48,.68) 100%)!important;
+  }
+}
+'''
+              s = s.replace("</style>", override + "\n</style>", 1)
+
+          p.write_text(s, encoding="utf-8")
+          PY
+
+      - name: Commit static hero fix
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "Lock hero to single crisp image"
+          git push
