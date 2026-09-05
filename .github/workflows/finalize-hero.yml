@@ -1,0 +1,31 @@
+name: Finalize crisp hero
+
+on:
+  push:
+    branches: [hero-assets-upload-20260905]
+    paths:
+      - ".hero-src/final/READY"
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: hero-assets-upload-20260905
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild original-resolution hero and tune contrast
+        run: python tools/finalize_hero.py
+      - name: Commit final hero
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index.html assets/photos/hero-*.webp
+          git commit -m "Finalize original-resolution hero" || exit 0
+          git push origin HEAD:hero-assets-upload-20260905
