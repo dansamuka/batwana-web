@@ -57,6 +57,38 @@ figure and you will find all three.
 `batwanakenyaltd@gmail.com` — they appear in the WhatsApp deep links, the
 `tel:`/`mailto:` links, the contact cards, the footer and the schema.
 
+## The scroll act
+
+The opening is a sticky stage over a 300vh track (240vh on mobile) scrubbing a
+72-frame image sequence: an empty lawn becomes a funpark as you scroll. See
+[`docs/SHOT-LIST.md`](docs/SHOT-LIST.md) to shoot the real footage.
+
+**Connection tier decides whether it runs at all**, before first paint:
+
+| Tier | When | What loads |
+|---|---|---|
+| `full` | 4G and better | 12 frames first (~92 KB), then the rest (~988 KB) |
+| `coarse` | 3G | 12 frames only, ~92 KB |
+| `static` | reduced-motion, Save-Data, 2G, no rAF/canvas, no JS | Nothing. The plain hero renders instead. |
+
+Nobody on a bad connection pays for the cinema, and with JS off the page still
+works. The static hero is the `.hero` section — keep it.
+
+**The lerp is the whole trick.** A naive `current += (target-current)*0.1` runs at a
+different speed on a 120Hz phone than a 60Hz one:
+
+```js
+current += (p - current) * (1 - Math.exp(-dt * LERP_TAU));
+if (Math.abs(p - current) < SNAP) current = p;
+```
+
+**The beats have deliberate gaps.** Beat 1 clears at p=0.28, beat 2 starts at 0.32.
+That 0.04 dead zone is why it reads as a cut rather than a dissolve. The navbar
+flips from ink to white at p=0.55, which is where the footage goes dark.
+
+To change the frame count, edit `var N = 72` in the act runtime and `N` in
+`tools/make-frames.py`.
+
 ## Two things worth knowing
 
 **Splat dividers need two classes.** A divider paints the incoming section's
@@ -77,6 +109,7 @@ ink on yellow, at 9.9:1.
 - Replace `assets/photos/*-slot.svg` with real photographs — written parental
   consent required for any identifiable child
 - Confirm the prices against the real rate card
+- Shoot the real setup-day sequence — see `docs/SHOT-LIST.md`
 - Commission a vector logo with the three splats as separate paths
 - Verify the insurance and safety claims before publishing them
 
