@@ -1,0 +1,44 @@
+name: Install generated Batwana hero
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/hero-install/**"
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decode generated hero
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64
+
+          root = Path('.')
+          chunks = sorted((root / 'tools' / 'hero-install').glob('part*.txt'))
+          if not chunks:
+              raise SystemExit('No hero chunks found')
+          data = ''.join(p.read_text().strip() for p in chunks)
+          raw = base64.b64decode(data)
+          for i in range(1, 5):
+              (root / f'assets/photos/hero-{i:02d}.webp').write_bytes(raw)
+          PY
+
+      - name: Commit generated hero
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/photos/hero-01.webp assets/photos/hero-02.webp assets/photos/hero-03.webp assets/photos/hero-04.webp
+          git rm -r tools/hero-install
+          git commit -m "Use generated Batwana hero"
+          git push
