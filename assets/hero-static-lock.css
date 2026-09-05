@@ -1,0 +1,75 @@
+/* Batwana static hero lock — 2026-09-06
+   Purpose: remove all blur/crossfade behavior and keep the generated hero visible continuously. */
+
+/* Legacy motion hero is retired. */
+.act { display: none !important; }
+.act__still,
+.act__canvas {
+  filter: none !important;
+  transform: none !important;
+}
+
+/* Always render the normal hero. */
+.hero {
+  display: flex !important;
+  background: var(--indigo-900) !important;
+}
+
+.hero__bg {
+  position: absolute !important;
+  inset: 0 !important;
+  background: var(--indigo-900) !important;
+}
+
+/* One continuously visible image. No opacity cycle, animation, blur or scaling. */
+.hero__slide {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  opacity: 1 !important;
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  filter: none !important;
+  image-rendering: auto !important;
+  will-change: auto !important;
+}
+
+/* Existing hero-02/03/04 remain in the markup for now, but are never rendered. */
+.hero__slide:not(:first-child) {
+  display: none !important;
+}
+
+/* Contrast only — this is a translucent colour overlay, not a blur. */
+.hero__bg::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 23, 66, .50) 0%,
+    rgba(28, 23, 66, .24) 46%,
+    rgba(28, 23, 66, .06) 100%
+  ) !important;
+}
+
+@media (max-width: 700px) {
+  /* Shift toward the sharper action in the generated photograph on narrow screens. */
+  .hero__slide {
+    object-position: 68% center !important;
+  }
+
+  .hero__bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 15, 48, .08) 0%,
+      rgba(18, 15, 48, .06) 36%,
+      rgba(18, 15, 48, .22) 68%,
+      rgba(18, 15, 48, .64) 100%
+    ) !important;
+  }
+}
